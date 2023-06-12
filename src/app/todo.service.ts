@@ -35,4 +35,9 @@ export class TodoService {
     })
     this.todoList.next(updatedList);
   }
+
+  addTodo(todo: Todo) {
+    const updatedList = [...this.todoList.getValue(), todo]
+    this.todoList.next(updatedList);
+  }
 }
