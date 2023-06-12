@@ -7,7 +7,7 @@ import { TodoService } from './todo.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'todo-app';
   todoList: Todo[] = [];
 
@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   }
 
   getTodos(): void {
-    this.todoService.getTodos().subscribe((todos) => (this.todoList = todos));
+    this.todoService.getTodos().subscribe((todos) => {
+      this.todoList = todos;
+    });
   }
 }

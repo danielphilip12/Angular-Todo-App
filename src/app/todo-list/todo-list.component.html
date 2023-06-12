@@ -1,3 +1,5 @@
 <ul>
-    <li *ngFor="let todo of todoList">{{ todo.todo }} - {{ todo.completed }}</li>
+    <li *ngFor="let todo of todoList">
+        <app-todo-item [todo]="todo"></app-todo-item>
+    </li>
 </ul>

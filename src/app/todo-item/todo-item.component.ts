@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Todo } from '../todo';
+import { TodoService } from '../todo.service';
 
 @Component({
   selector: 'app-todo-item',
@@ -6,6 +8,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent {
-  @Input() todo!: string;
-  @Input() completed!: boolean;
+  @Input() todo!: Todo;
+
+  constructor(private todoService: TodoService) {}
+
+  completeTodo() {
+    this.todoService.completeTodo(this.todo.id);
+    console.log(this.todo)
+  }
 }
