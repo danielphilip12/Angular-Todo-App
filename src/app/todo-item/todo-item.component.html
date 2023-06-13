@@ -1,3 +1,7 @@
-<div>
-    <p>{{ todo.todo }} - <span (click)="completeTodo()">{{ todo.completed }}</span></p> 
+<div class="todoItem">
+  <p>{{ todo.todo }} - {{ todo.completed }}</p>
+  <div class="actions">
+    <button id="complete" (click)="completeTodo()">Complete</button>
+    <button id="delete">Delete</button>
+  </div>
 </div>

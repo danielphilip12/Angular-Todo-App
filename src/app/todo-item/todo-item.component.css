@@ -1,0 +1,27 @@
+.todoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+#complete {
+    background-color: green;
+}
+
+#delete {
+    background-color: red;
+}
