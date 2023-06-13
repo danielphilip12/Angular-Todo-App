@@ -1,5 +1,5 @@
-<div class="todoItem">
-  <p>{{ todo.todo }} - {{ todo.completed }}</p>
+<div class="todoItem" [class.completed]="todo.completed">
+  <p>{{ todo.todo }}</p>
   <div class="actions">
     <button id="complete" (click)="completeTodo()">Complete</button>
     <button id="delete">Delete</button>

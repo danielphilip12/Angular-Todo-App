@@ -1,4 +1,4 @@
-.todoItem {
+/* .todoItem {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,3 +25,83 @@
 #delete {
     background-color: red;
 }
+
+.completed {
+    background-color: rgba(0, 255, 0, 0.5);
+} */
+
+
+
+/* Styling for the todo item */
+.todoItem {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Wrap items to the next line when necessary */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%; /* Set full width initially */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+  
+  /* Styling for completed todo items */
+  .todoItem.completed {
+    background-color: #c1e7c1;
+  }
+  
+  /* Styling for the todo text */
+  .todoItem p {
+    margin: 0;
+    font-size: 16px;
+    flex: 1; /* Allow the paragraph to grow and fill the available space */
+  }
+  
+  /* Styling for the actions container */
+  .actions {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line when necessary */
+    margin-top: 10px; /* Add space between paragraph and buttons */
+  }
+  
+  /* Styling for the action buttons */
+  .actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px; /* Add spacing between buttons */
+  }
+  
+  .actions button#complete {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .actions button#delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    .todoItem {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Align items to the left */
+    }
+  
+    .actions {
+      margin-top: 0; /* Remove top margin for buttons */
+      margin-left: auto; /* Push buttons to the right */
+      margin-right: 0; /* Remove right margin */
+    }
+  
+    .actions button {
+      margin-top: 5px; /* Add spacing between buttons */
+      margin-left: 5px; /* Add left margin for buttons */
+    }
+  }
+  

@@ -1,5 +1,5 @@
-<div>
-    <label for="newTodo">New Todo: </label>
-    <input type="text" [(ngModel)]="newTodo" name="newTodo" id="newTodo">
-    <button (click)="addTodo()">Submit</button>
+<div class="newTodoForm">
+    <label for="newTodo" class="todoLabel">New Todo: </label>
+    <input class="todoInput" type="text" [(ngModel)]="newTodo" name="newTodo" id="newTodo">
+    <button class="submitNewTodo" (click)="addTodo()">Submit</button>
 </div>
