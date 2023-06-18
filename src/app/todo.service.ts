@@ -40,4 +40,9 @@ export class TodoService {
     const updatedList = [...this.todoList.getValue(), todo]
     this.todoList.next(updatedList);
   }
+
+  deleteTodo(todoId: number) {
+    const updatedList = this.todoList.getValue().filter(todo => todo.id !== todoId);
+    this.todoList.next(updatedList);
+  }
 }

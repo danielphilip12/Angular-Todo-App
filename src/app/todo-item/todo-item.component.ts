@@ -16,4 +16,9 @@ export class TodoItemComponent {
     this.todoService.completeTodo(this.todo.id);
     console.log(this.todo)
   }
+
+  deleteTodo() {
+    this.todoService.deleteTodo(this.todo.id);
+    
+  }
 }
